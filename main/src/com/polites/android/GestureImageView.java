@@ -382,11 +382,13 @@ public class GestureImageView extends ImageView  {
 			if(colorFilter != null) {
 				this.drawable.setColorFilter(colorFilter);
 			}
+			layout = false;
+			startingScale = -1.0f;
 		}
 		
 		if(!layout) {
 			requestLayout();
-			redraw();
+			reset();
 		}
 	}
 
